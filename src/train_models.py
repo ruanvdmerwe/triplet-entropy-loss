@@ -96,7 +96,7 @@ def return_densenet_model(image_width = 128, image_height = 128, type_='both'):
     x = tf.keras.applications.densenet.preprocess_input(input_)
     res50 = tf.keras.applications.DenseNet121(include_top=False,
                                               input_shape = (image_height,image_width,3),
-                                              weights='imagenet',
+                                              weights=None,
                                               classes = len(CLASS_NAMES), 
                                               pooling='avg')(x)
     x = tf.keras.layers.Flatten()(res50)
@@ -139,7 +139,7 @@ def return_resnet_model(image_width = 128, image_height = 128, type_='both'):
     x = tf.keras.applications.resnet.preprocess_input(input_)
     res50 = tf.keras.applications.ResNet50(include_top=False,
                                            input_shape = (image_height,image_width,3),
-                                           weights='imagenet',
+                                           weights=None,
                                            classes = len(CLASS_NAMES),
                                            pooling='avg')(x)
     x = tf.keras.layers.Flatten()(res50)
