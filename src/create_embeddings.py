@@ -1,14 +1,7 @@
-import json
 import os
-
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import plotly_express as px
-from tqdm import tqdm_notebook, tqdm
-
 import tensorflow as tf
+
 # Set up GPU config
 print("Setting up GPU if found")
 physical_devices = tf.config.experimental.list_physical_devices("GPU")
@@ -17,17 +10,6 @@ if physical_devices:
         tf.config.experimental.set_memory_growth(device, True)
         
 print(f'Tensorflow version: {tf.__version__}')
-
-import tensorflow_addons as tfa
-
-from sklearn.model_selection import test_split
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
-from sklearn.pipeline import Pipeline
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-
-from scipy.spatial import distance
-import random
 
 DATA_DIR = "./"
 CLASS_NAMES = ['afr', 'eng','nso','tsn', 'xho', 'zul']

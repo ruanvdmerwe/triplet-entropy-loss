@@ -5,18 +5,15 @@ found in relevant subfolders.
 '''
 
 import os
-import time
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 from more_itertools import chunked
 import io
 
 import tensorflow as tf
-from sklearn import preprocessing
 from sklearn.utils import shuffle
 
 import librosa
@@ -31,7 +28,6 @@ from tqdm import tqdm
 # detect language in text
 from langdetect import DetectorFactory, detect, detect_langs
 DetectorFactory.seed = 42
-
 
 LANG_ABBREVIATIONS = ["afr", "eng", "tso", "nbl",
                       "ven", "tsn", "sot", "nso",
