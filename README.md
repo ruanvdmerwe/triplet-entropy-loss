@@ -13,7 +13,25 @@ It was found that all three of these methods improved the generalization of the 
 
 For tasks such as language identification where the input data can contain data which is present in many other classes as well, such as someone speaking a mix of words from different languages, it will be more optimal to have a loss function that interprets interactions between classes at the output. The loss must optimize the network by learning these interactions between classes to generalize better to the instances where there is a tiny threshold between the classes. A loss that loosely fits this description is the Triplet loss function. By using the Triplet loss function, the weights of a network are being optimized by comparing different classe embeddings with one another and optimizing the distance between the embeddings such that different classes are far from one another. The model can then learn special characteristics of all the classes and in doing so could be able to better learn the fine connections between languages such as English and Zulu for instance. But Triplet loss does not optimize for prediction capabilities directly.
 
-The TEL training method aims to leverage both the strengths of Cross Entropy Loss (CEL) and Triplet loss during the training process, assuming that it would lead to better generalization for language identification tasks. The TEL method though does not contain a pre-training step, but trains simultaneously with both CEL and Triplet losses, as shown in the figure below. As seen, the final embedding layer feeds into two separate layers where each of these output layers are connected to two different losses. TEL can be represented by \Cref{tel_formula}, with $\sigma$ being the softmax function and $g()$ the final classification layer. $N$ is the number of examples in the batch being passed through the network. The embeddings generated for the anchor, postive and negative triplets are given by $f_{i}^{a}$, $f_{i}^{p}$ and $f_{i}^{n}$. If only CEL is used, $f_{i}^{a}$ will be the vector analysed. 
+The TEL training method aims to leverage both the strengths of Cross Entropy Loss (CEL) and Triplet loss during the training process, assuming that it would lead to better generalization for language identification tasks. The TEL method though does not contain a pre-training step, but trains simultaneously with both CEL and Triplet losses, as shown in the figure below. As seen, the final embedding layer feeds into two separate layers where each of these output layers are connected to two different losses. TEL can be represented by the equation.
 
+IMAGE OF NETWORK
 
+IMAGE OF FORMULA
+
+## Using the repo
+
+### Getting the data
+
+In order to dowload the South African speech language used in the project, please visit https://repo.sadilar.org/handle/20.500.12185/7 where the NCHLT, NCHLT Auxliary and Lwazi data can be downloaded. The data can then be extracted to your working directory.
+
+## Code
+
+All of the code used for this project can be found in the src folder. 
+
+The data_handling.py file contains all of the code required to manipulate the extracted data for all of the speech data. This involves cleaning as well as converting the speech to the correct spectrogram format.
+
+The run_expirments.py files contain code to train a custom model, Inception-V3 model, Resnet50 model as well as a Densenet121 model. If you want to use pre-trained weights ensure to change the weights to be loaded to 'imagenet' in all of the return_{architecture}_model functions. 
+
+To generate embeddings from etc from the models created, you can use the create_embeddings.py file. Once the embeddings are generated you can use the notebooks in the notebook folder to further investigate the data.
 
