@@ -29,7 +29,7 @@ Below is the embeddings generated form a Densenet121 model trained with TEL, CEL
 
 In order to dowload the South African speech language used in the project, please visit https://repo.sadilar.org/handle/20.500.12185/7 where the NCHLT, NCHLT Auxliary and Lwazi data can be downloaded. The data can then be extracted to your working directory.
 
-## Code
+### Code
 
 All of the code used for this project can be found in the src folder. 
 
