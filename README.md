@@ -39,3 +39,4 @@ The **run_expirments.py** files contain code to train a custom model, Inception-
 
 To generate embeddings from etc from the models created, you can use the **create_embeddings.py** file. Once the embeddings are generated you can use the notebooks in the notebook folder to further investigate the data.
 
+The folder also contains a file, **spectobot.py** which can be used to launch a telegram application that can be used to further gather data about model performances in the wild as well as help in gathering data to further train models. Specifically on utterances where users speak normally instead of reading of a prompt.
