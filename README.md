@@ -33,9 +33,9 @@ In order to dowload the South African speech language used in the project, pleas
 
 All of the code used for this project can be found in the src folder. 
 
-The data_handling.py file contains all of the code required to manipulate the extracted data for all of the speech data. This involves cleaning as well as converting the speech to the correct spectrogram format.
+The **data_handling.py** file contains all of the code required to manipulate the extracted data for all of the speech data. This involves cleaning as well as converting the speech to the correct spectrogram format.
 
-The run_expirments.py files contain code to train a custom model, Inception-V3 model, Resnet50 model as well as a Densenet121 model. If you want to use pre-trained weights ensure to change the weights to be loaded to 'imagenet' in all of the return_{architecture}_model functions. 
+The **run_expirments.py** files contain code to train a custom model, Inception-V3 model, Resnet50 model as well as a Densenet121 model. If you want to use pre-trained weights ensure to change the weights to be loaded to 'imagenet' in all of the return_{architecture}_model functions. 
 
-To generate embeddings from etc from the models created, you can use the create_embeddings.py file. Once the embeddings are generated you can use the notebooks in the notebook folder to further investigate the data.
+To generate embeddings from etc from the models created, you can use the **create_embeddings.py** file. Once the embeddings are generated you can use the notebooks in the notebook folder to further investigate the data.
 
