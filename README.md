@@ -29,13 +29,14 @@ Below is the embeddings generated form a Densenet121 model trained with TEL, CEL
 
 In order to dowload the South African speech language used in the project, please visit https://repo.sadilar.org/handle/20.500.12185/7 where the NCHLT, NCHLT Auxliary and Lwazi data can be downloaded. The data can then be extracted to your working directory.
 
-## Code
+### Code
 
 All of the code used for this project can be found in the src folder. 
 
 The **data_handling.py** file contains all of the code required to manipulate the extracted data for all of the speech data. This involves cleaning as well as converting the speech to the correct spectrogram format.
 
-The **run_expirments.py** files contain code to train a custom model, Inception-V3 model, Resnet50 model as well as a Densenet121 model. If you want to use pre-trained weights ensure to change the weights to be loaded to 'imagenet' in all of the return_{architecture}_model functions. 
+The **train_models.py** files contain code to train a custom model, Inception-V3 model, Resnet50 model as well as a Densenet121 model. If you want to use pre-trained weights ensure to change the weights to be loaded to 'imagenet' in all of the return_{architecture}_model functions. The code will run three training rounds for each model and save that specific model's weights as well as the training history.
 
-To generate embeddings from etc from the models created, you can use the **create_embeddings.py** file. Once the embeddings are generated you can use the notebooks in the notebook folder to further investigate the data.
+To generate embeddings from from the models created, you can use the **create_embeddings.py** file.
 
+The folder also contains a file, **spectobot.py** which can be used to launch a telegram application that can be used to further gather data about model performances in the wild as well as help in gathering data to further train models. Specifically on utterances where users speak normally instead of reading of a prompt.
