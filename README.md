@@ -15,7 +15,7 @@ For tasks such as language identification where the input data can contain data 
 
 The TEL training method aims to leverage both the strengths of Cross Entropy Loss (CEL) and Triplet loss during the training process, assuming that it would lead to better generalization for language identification tasks. The TEL method though does not contain a pre-training step, but trains simultaneously with both CEL and Triplet losses, as shown in the figure below. As seen, the final embedding layer feeds into two separate layers where each of these output layers are connected to two different losses. TEL can be represented by the equation.
 
-![network_image](https://github.com/ruanvdmerwe/triplet-entropy-loss/blob/main/images/tel_high_level_overview.png)
+![network_image](https://github.com/ruanvdmerwe/triplet-entropy-loss/blob/main/images/tel_model.jpg)
 
 ![formula](https://github.com/ruanvdmerwe/triplet-entropy-loss/blob/main/images/tel_eq.PNG)
 
