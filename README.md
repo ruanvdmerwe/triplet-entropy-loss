@@ -9,6 +9,8 @@ The tests were done in a South African context on six languages, namely Afrikaan
 
 It was found that all three methods improved the generalisation of the models, though not significantly. Even though the models trained using Triplet Entropy Loss showed a better understanding of the languages and higher accuracies, it appears as though the models still memorise word patterns present in the spectrograms rather than learning the finer nuances of a language. The research shows that Triplet Entropy Loss has great potential and should be investigated further, but not only in language identification tasks but any classification task.
 
+The full paper can be found [here](https://arxiv.org/abs/2012.03775)
+
 ## TEL overview
 
 For tasks such as language identification where the input data can contain data which is present in many other classes as well, such as someone speaking a mix of words from different languages, it will be more optimal to have a loss function that interprets interactions between classes at the output. The loss must optimize the network by learning these interactions between classes to generalize better to the instances where there is a tiny threshold between the classes. A loss that loosely fits this description is the Triplet loss function. By using the Triplet loss function, the weights of a network are being optimized by comparing different classe embeddings with one another and optimizing the distance between the embeddings such that different classes are far from one another. The model can then learn special characteristics of all the classes and in doing so could be able to better learn the fine connections between languages such as English and Zulu for instance. But Triplet loss does not optimize for prediction capabilities directly.
@@ -27,7 +29,7 @@ Below is the embeddings generated form a Densenet121 model trained with TEL, CEL
 
 ### Getting the data
 
-In order to dowload the South African speech language used in the project, please visit https://repo.sadilar.org/handle/20.500.12185/7 where the NCHLT, NCHLT Auxliary and Lwazi data can be downloaded. The data can then be extracted to your working directory.
+In order to dowload the South African speech language used in the project, please visit [Sadilar](https://repo.sadilar.org/handle/20.500.12185/7) where the NCHLT, NCHLT Auxliary and Lwazi data can be downloaded. The data can then be extracted to your working directory.
 
 ### Code
 
