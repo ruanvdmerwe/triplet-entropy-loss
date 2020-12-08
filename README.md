@@ -42,3 +42,17 @@ The **train_models.py** files contain code to train a custom model, Inception-V3
 To generate embeddings from from the models created, you can use the **create_embeddings.py** file.
 
 The folder also contains a file, **spectobot.py** which can be used to launch a telegram application that can be used to further gather data about model performances in the wild as well as help in gathering data to further train models. Specifically on utterances where users speak normally instead of reading of a prompt.
+
+
+## References and Notes
+
+If you use TEL or this code, please reference:
+
+@misc{vandermerwe2020triplet,
+      title={Triplet Entropy Loss: Improving The Generalisation of Short Speech Language Identification Systems}, 
+      author={Ruan van der Merwe},
+      year={2020},
+      eprint={2012.03775},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
