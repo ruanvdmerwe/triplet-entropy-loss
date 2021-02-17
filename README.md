@@ -48,11 +48,9 @@ The folder also contains a file, **spectobot.py** which can be used to launch a 
 
 If you use TEL or this code, please reference:
 
-@misc{vandermerwe2020triplet,
-      title={Triplet Entropy Loss: Improving The Generalisation of Short Speech Language Identification Systems}, 
-      author={Ruan van der Merwe},
-      year={2020},
-      eprint={2012.03775},
-      archivePrefix={arXiv},
-      primaryClass={cs.SD}
+@article{van2020triplet,
+  title={Triplet Entropy Loss: Improving The Generalisation of Short Speech Language Identification Systems},
+  author={van der Merwe, Ruan},
+  journal={arXiv preprint arXiv:2012.03775},
+  year={2020}
 }
